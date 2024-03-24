@@ -11,9 +11,9 @@ export const Header = () => {
             <Space>
                 <TeamOutlined className={styles.teamIcon}/>
                 <Link to={Paths.home}>
-                    <CustomBtn type='default'>
+                    {/*<CustomBtn type='default'>*/}
                         <Typography.Title level={2}>Employees</Typography.Title>
-                    </CustomBtn>
+                    {/*</CustomBtn>*/}
                 </Link>
             </Space>
             <Space>

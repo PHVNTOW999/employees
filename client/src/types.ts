@@ -1,6 +1,6 @@
 export type ErrorWithMessage = {
-    status: Number,
+    status: number,
     data: {
-        message: String,
+        message: string,
     }
 }

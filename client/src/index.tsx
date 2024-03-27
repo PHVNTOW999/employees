@@ -13,6 +13,8 @@ import {Auth} from "./features/auth/auth";
 import {Employees} from "./pages/employees";
 import {selectUser} from "./features/auth/authSlice";
 import {TestPage} from "./pages/test";
+import {AddEmployee} from "./pages/addEmployee";
+import {Status} from "./pages/status";
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
     {
         path: Paths.register,
         element: <Register/>
+    },
+    {
+        path: Paths.employeeAdd,
+        element: <AddEmployee />
+    },
+    {
+        path: `${Paths.status}/:status`,
+        element: <Status />
     },
     {
         path: Paths.test,

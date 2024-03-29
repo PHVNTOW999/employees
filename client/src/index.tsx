@@ -15,6 +15,8 @@ import {selectUser} from "./features/auth/authSlice";
 import {TestPage} from "./pages/test";
 import {AddEmployee} from "./pages/addEmployee";
 import {Status} from "./pages/status";
+import {Employee} from "./pages/employee";
+import {EditEmployee} from "./pages/editEmployee";
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
     {
         path: `${Paths.status}/:status`,
         element: <Status />
+    },
+    {
+        path: `${Paths.employee}/:id`,
+        element: <Employee />
+    },
+    {
+        path: `${Paths.employeeEdit}/:id`,
+        element: <EditEmployee />
     },
     {
         path: Paths.test,

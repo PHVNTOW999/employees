@@ -2,8 +2,13 @@ const {prisma} = require("../prisma/prisma-client");
 
 const all = async (req, res) => {
     try {
-        console.log('ggg')
-        const employees = await prisma.employee.findMany()
+        const employees = await prisma.employee.findMany();
+        console.log(req.user.id)
+        // const employees = await prisma.employee.findMany({
+        //     where: {
+        //         userID: req.user.id
+        //     }
+        // })
 
         res.status(200).json(employees)
     } catch (error) {
@@ -65,7 +70,7 @@ const edit = async (req, res) => {
             where: {
                 id
             },
-            data
+            data,
         });
 
         res.status(204).json('ok')
